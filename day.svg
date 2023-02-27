@@ -16,7 +16,8 @@
       xmlns:cc="http://creativecommons.org/ns#"
       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
       xmlns:svg="http://www.w3.org/2000/svg"
-      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4433.2002 2666.6667" height="2666.6667" width="4433.2002" xml:space="preserve" id="svg2" version="1.1">
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4433.2002 2666.6667" height="2666.6667" width="4433.2002" xml:space="preserve" 
+      id="svg2" version="1.1" class="day" preserveAspectRatio="xMidYMid slice">
       <metadata id="metadata8">
         <rdf:RDF>
           <cc:Work rdf:about="">
@@ -4191,25 +4192,7 @@
                 </g>
               </g>
             </g>
-            <g id="g3104">
-              <g id="g3106" />
-              <g mask="url(#mask3152)" id="g3182">
-                <g id="g3184" />
-                <g id="g3216">
-                  <g id="g3214" clip-path="url(#clipPath3188)">
-                    <g id="g3212">
-                      <g id="g3210">
-                        <g id="g3208">
-                          <g id="g3206">
-                            <path id="path3204" style="fill:url(#radialGradient3202);stroke:none" d="m 2266.792,1422.403 c -84.336,-250.247 -374.863,-378.241 -648.915,-285.884 -274.052,92.354 -427.849,370.09 -343.513,620.337 84.335,250.248 374.864,378.242 648.915,285.885 274.054,-92.356 427.848,-370.091 343.513,-620.338" />
-                          </g>
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </g>
-            </g>
+            
             <g id="g3218">
               <g id="g3220" />
               <g mask="url(#mask3266)" id="g3296">
