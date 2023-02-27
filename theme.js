@@ -1,39 +1,42 @@
+function fetchSVG(option) {
+    var request = new XMLHttpRequest();
+    if (option == "day") {
+        request.open("GET", "day.svg");
+    }
+    else {
+        request.open("GET", "night.svg");
+    }
+    request.setRequestHeader("Content-Type", "image/svg+xml");
+    request.addEventListener("load", function (event) {
+        var response = event.target.responseText;
+        var svg = document.getElementById("svg2");
+        svg.innerHTML = response;
+    });
+    request.send();
+}
+
+
 // Provides background image and greeting based on time of day
 function changeBackground() {
     var date = new Date();
     var current_hour = date.getHours();
+    var request = new XMLHttpRequest();
     if (current_hour > 6 && current_hour < 18) {
-        document.getElementById("time").innerHTML = "Good morning";
-        document.body.style.backgroundImage = "url('images/best day.svg')";
-    } else {
-        var element = document.body;
-        element.classList.add("dark-mode");
-        document.getElementById("time").innerHTML = "Good Night";
-        element.style.backgroundImage = "url('images/best night.svg')";
+        request.open("GET", "day.svg");
     }
+    else {
+        request.open("GET", "night.svg");
+    }
+    request.setRequestHeader("Content-Type", "image/svg+xml");
+    request.addEventListener("load", function (event) {
+        var response = event.target.responseText;
+        var svg = document.createElement("svg");
+        svg.innerHTML = response;
+        document.body.appendChild(svg);
+    });
+    request.send();
 }
 
 $(document).ready(function () {
     changeBackground();
-});
-
-// Create a function to change the background image on toggle
-function changeBackgroundToggle() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-    if (element.classList.contains("dark-mode")) {
-        document.getElementById("time").innerHTML = "Good Night";
-        element.style.backgroundImage = "url('images/best night.svg')";
-    } else {
-        document.getElementById("time").innerHTML = "Good morning";
-        element.style.backgroundImage = "url('images/best day.svg')";
-    }
-}
-
-$(document).ready(function () {
-    $('.sun').click(function () {
-        // $(this).next('ul').slideToggle('500');
-        $(this).find('i').toggleClass('fa-solid fa-sun fa-solid fa-moon');
-        changeBackgroundToggle();
-    });
 });
