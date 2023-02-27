@@ -1,1 +1,17 @@
+body {
+    margin: 0;
+}
 
+svg {
+    height: 100%;
+    width: 100%;
+    size: cover;
+}
+
+
+body {
+    background-color: white;
+    color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
