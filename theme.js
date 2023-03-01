@@ -4,7 +4,7 @@ function fetchSVG(option) {
         request.open("GET", "day.svg");
     }
     else {
-        request.open("GET", "noight.svg");
+        request.open("GET", "night.svg");
     }
     request.setRequestHeader("Content-Type", "image/svg+xml");
     request.addEventListener("load", function (event) {
@@ -24,7 +24,7 @@ function changeBackground() {
         request.open("GET", "day.svg");
     }
     else {
-        request.open("GET", "noight.svg");
+        request.open("GET", "night.svg");
     }
     request.setRequestHeader("Content-Type", "image/svg+xml");
     request.addEventListener("load", function (event) {
