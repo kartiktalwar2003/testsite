@@ -4,7 +4,7 @@ function fetchSVG(option) {
         request.open("GET", "day.svg");
     }
     else {
-        request.open("GET", "night.svg");
+        request.open("GET", "noight.svg");
     }
     request.setRequestHeader("Content-Type", "image/svg+xml");
     request.addEventListener("load", function (event) {
@@ -24,7 +24,7 @@ function changeBackground() {
         request.open("GET", "day.svg");
     }
     else {
-        request.open("GET", "night.svg");
+        request.open("GET", "noight.svg");
     }
     request.setRequestHeader("Content-Type", "image/svg+xml");
     request.addEventListener("load", function (event) {
@@ -41,3 +41,24 @@ function changeBackground() {
 $(document).ready(function () {
     changeBackground();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.body.addEventListener("click", (event) => {
+        var day_svg = document.querySelector('.morning');
+        console.log(day_svg);
+        var night_svg = document.querySelector('.night');
+        console.log(night_svg);
+
+        var firstImageClick = Boolean(event.target.closest('.sun-object'))
+        var secondImageClick = Boolean(event.target.closest('.moon-object'))
+
+        if (firstImageClick) {
+            day_svg.style.display = 'none'
+            night_svg.style.display = 'block'
+        } else if (secondImageClick) {
+            day_svg.style.display = 'block'
+            night_svg.style.display = 'none'
+        }
+
+    })
+})
