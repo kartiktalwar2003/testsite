@@ -3,20 +3,24 @@
     <script type="text/javascript" src="theme.js"></script>
     <link href="style.css" rel="stylesheet"/>
   </head>
-
+  
   <body>
     <style>
         #svg2 {
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
+            margin: 0;
+            height: 100%;
+            width: 100%;
         }
     </style>
     <svg xmlns:dc="http://purl.org/dc/elements/1.1/"
       xmlns:cc="http://creativecommons.org/ns#"
       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
       xmlns:svg="http://www.w3.org/2000/svg"
-      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4433.2002 2666.6667" height="2666.6667" width="4433.2002" xml:space="preserve" 
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4433.2002 2666.6667" 
+      height="2666.6667" width="4433.2002" xml:space="preserve" 
       id="svg2" version="1.1" class="day" preserveAspectRatio="xMidYMid slice">
       <metadata id="metadata8">
         <rdf:RDF>

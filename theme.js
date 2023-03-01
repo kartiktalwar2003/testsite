@@ -9,8 +9,7 @@ function fetchSVG(option) {
     request.setRequestHeader("Content-Type", "image/svg+xml");
     request.addEventListener("load", function (event) {
         var response = event.target.responseText;
-        var svg = document.getElementById("svg2");
-        svg.innerHTML = response;
+        document.getElementsByClassName("bg")[0].innerHTML = response;
     });
     request.send();
 }
@@ -30,9 +29,11 @@ function changeBackground() {
     request.setRequestHeader("Content-Type", "image/svg+xml");
     request.addEventListener("load", function (event) {
         var response = event.target.responseText;
-        var svg = document.createElement("svg");
-        svg.innerHTML = response;
-        document.body.appendChild(svg);
+        // var svg = document.createElement("svg");
+        var bg_div = document.getElementsByClassName("bg")[0];
+        // console.log(bg_div);
+        bg_div.innerHTML = response;
+        // document.body.appendChild(bg_div);
     });
     request.send();
 }
