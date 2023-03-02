@@ -1,4 +1,8 @@
-<svg class="morning" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5881.0733 3944.44628" preserveAspectRatio="xMidYMid slice">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg class="morning"
+  xmlns="http://www.w3.org/2000/svg"
+  height="2666.6667" width="4433.2002" xml:space="preserve" id="svg2"
+  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5881.0733 3944.44628" preserveAspectRatio="xMidYMid slice">
   <defs>
     <filter id="e86f83b6-1e9c-44ce-a107-3de7b76e6339" x="0" y="-9192" width="3324.9004" height="32766" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-color="#fff" result="bg"/>
