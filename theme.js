@@ -4,7 +4,7 @@ function fetchSVG(option) {
         request.open("GET", "day.svg");
     }
     else {
-        request.open("GET", "night.svg");
+        request.open("GET", "noight.svg");
     }
     request.setRequestHeader("Content-Type", "image/svg+xml");
     request.addEventListener("load", function (event) {
@@ -19,45 +19,60 @@ function fetchSVG(option) {
 function changeBackground() {
     var date = new Date();
     var current_hour = date.getHours();
-    var request = new XMLHttpRequest();
     if (current_hour > 6 && current_hour < 18) {
-        request.open("GET", "day.svg");
+        var bg_div = document.getElementsByClassName("bg")[0];
+        bg_div.style.display = "block";
     }
     else {
-        request.open("GET", "night.svg");
+        var bg_div = document.getElementsByClassName("bg2")[0];
+        bg_div.style.display = "block";
     }
-    request.setRequestHeader("Content-Type", "image/svg+xml");
-    request.addEventListener("load", function (event) {
-        var response = event.target.responseText;
-        // var svg = document.createElement("svg");
-        var bg_div = document.getElementsByClassName("bg")[0];
-        // console.log(bg_div);
-        bg_div.innerHTML = response;
-        // document.body.appendChild(bg_div);
-    });
-    request.send();
 }
 
 $(document).ready(function () {
     changeBackground();
+    getSVGS();
 });
+
+
+//Function to get both svg in hidden form in div bg
+function getSVGS() {
+    var request = new XMLHttpRequest();
+    request.open("GET", "day.svg");
+    request.setRequestHeader("Content-Type", "image/svg+xml");
+    request.addEventListener("load", function (event) {
+        var response = event.target.responseText;
+        var bg_div = document.getElementsByClassName("bg")[0];
+        bg_div.innerHTML = response;
+    });
+    request.send();
+
+    var request = new XMLHttpRequest();
+    request.open("GET", "noight.svg");
+    request.setRequestHeader("Content-Type", "image/svg+xml");
+    request.addEventListener("load", function (event) {
+        var response = event.target.responseText;
+        var bg_div = document.getElementsByClassName("bg2")[0];
+        bg_div.innerHTML = response;
+    });
+    request.send();
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
     document.body.addEventListener("click", (event) => {
-        var day_svg = document.querySelector('.morning');
-        console.log(day_svg);
-        var night_svg = document.querySelector('.night');
-        console.log(night_svg);
+        var day_svg = document.querySelector('.bg');
+        var night_svg = document.querySelector('.bg2');
 
-        var firstImageClick = Boolean(event.target.closest('.sun-object'))
-        var secondImageClick = Boolean(event.target.closest('.moon-object'))
+        var secondImageClick = Boolean(event.target.closest('.moon-object'));
+        var firstImageClick = Boolean(event.target.closest('.sun-object'));
 
         if (firstImageClick) {
-            day_svg.style.display = 'none'
-            night_svg.style.display = 'block'
+            day_svg.style.display = 'none';
+            night_svg.style.display = 'block';
         } else if (secondImageClick) {
-            day_svg.style.display = 'block'
-            night_svg.style.display = 'none'
+            day_svg.style.display = 'block';
+            night_svg.style.display = 'none';
         }
 
     })
