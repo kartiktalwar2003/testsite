@@ -6,8 +6,8 @@ body {
     background-repeat: no-repeat;
 }
 
-
 svg {
+    display: none;
     height: 100vh;
     width: 100%;
     display: block;
@@ -16,7 +16,6 @@ svg {
     left: auto;
 }
 
-
 .svg-toggle {
     position: absolute;
     display: block;
@@ -24,5 +23,9 @@ svg {
     width: 150px;
     top: 10%;
     left: 75%;
+    cursor: pointer;
+}
+
+.moon-object, .sun-object {
     cursor: pointer;
 }
